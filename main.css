@@ -1,7 +1,7 @@
 h1 {
   color: rgb(84, 84, 179);
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 html {
@@ -10,4 +10,14 @@ html {
 
 #boton_huevo {
   background-color: aqua;
+  background-image: url("imagenes/huevo.jpg");
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 70px;
+  background-size: 50px 50px;
+  background-position: center;
+}
+
+#boton {
+  text-align: center;
 }
