@@ -8,6 +8,10 @@ html {
   background-color: rgb(14, 14, 14);
 }
 
+button{
+  text-align: center;
+}
+
 #boton_huevo {
   background-color: aqua;
   background-image: url("imagenes/huevo.jpg");
