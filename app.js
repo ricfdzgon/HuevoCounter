@@ -3,13 +3,14 @@ var contadorHuevos = 0;
 
 const botonQuitar = document.createElement("button");
 botonQuitar.type = "button";
-botonQuitar.innerText = "Quitar huevos";
+//botonQuitar.id = "botonQuitar";
+//botonQuitar.innerText = "";
 
 botonHuevos.addEventListener("click", function (event) {
   contadorHuevos++;
   document.getElementById("parrafo2").innerHTML =
-    "Huevos comidos: " + contadorHuevos;
-  document.body.appendChild(botonQuitar);
+    "Huevos comidos: " + contadorHuevos + "\t";
+  document.getElementById("parrafo2").appendChild(botonQuitar);
 });
 
 botonQuitar.addEventListener("click", function (event) {
@@ -17,5 +18,6 @@ botonQuitar.addEventListener("click", function (event) {
     contadorHuevos--;
   }
   document.getElementById("parrafo2").innerHTML =
-    "Huevos comidos: " + contadorHuevos;
+    "Huevos comidos: " + contadorHuevos + "\t";
+  document.getElementById("parrafo2").appendChild(botonQuitar);
 });
