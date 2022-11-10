@@ -12,10 +12,9 @@ html {
   background-color: aqua;
   background-image: url("imagenes/huevo.jpg");
   background-repeat: no-repeat;
-  height: 60px;
-  width: 70px;
-  background-size: 50px 50px;
-  background-position: center;
+  height: 600px;
+  width: 700px;
+  background-size: cover;
 }
 
 #boton {
