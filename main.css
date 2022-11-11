@@ -18,6 +18,10 @@ button {
   background-size: contain;
 }
 
+#parrafoBotonQuitar{
+  text-align: center;
+}
+
 #boton_huevo {
   background-color: aqua;
   background-image: url("imagenes/huevo.jpg");
