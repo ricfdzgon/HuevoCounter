@@ -4,12 +4,16 @@ var canEdit = true;
 
 const botonQuitar = document.createElement("button");
 botonQuitar.type = "button";
+botonQuitar.id = "botonQuitar";
 
 const cajaPassWord = document.createElement("input");
 cajaPassWord.type = "password";
+cajaPassWord.id = "cajaPassword";
 
 const comprobarPass = document.createElement("button");
-botonQuitar.type = "button";
+comprobarPass.type = "button";
+comprobarPass.id = "botonComprobarPass";
+comprobarPass.textContent = "Acceder";
 
 botonHuevos.addEventListener("click", function (event) {
   if (canEdit) {
@@ -33,6 +37,17 @@ botonQuitar.addEventListener("click", function (event) {
       document.getElementById("parrafo2").appendChild(botonQuitar);
     } else {
       document.getElementById("parrafoBotonQuitar").removeChild(cajaPassWord);
+      document.getElementById("parrafoBotonQuitar").removeChild(comprobarPass);
     }
   }
+});
+
+comprobarPass.addEventListener("click", function (event) {
+  console.log(cajaPassWord.value);
+  canEdit = false;
+});
+
+cajaPassWord.addEventListener("change", function (event) {
+  console.log(cajaPassWord.value);
+  canEdit = false;
 });

@@ -8,7 +8,11 @@ html {
   background-color: rgb(14, 14, 14);
 }
 
-button {
+#parrafoBotonQuitar {
+  text-align: center;
+}
+
+#botonQuitar {
   background-color: rgb(14, 14, 14);
   background-image: url("imagenes/signo-de-menos.png");
   background-repeat: no-repeat;
@@ -18,10 +22,6 @@ button {
   background-size: contain;
 }
 
-#parrafoBotonQuitar{
-  text-align: center;
-}
-
 #boton_huevo {
   background-color: aqua;
   background-image: url("imagenes/huevo.jpg");
@@ -29,8 +29,13 @@ button {
   height: 400px;
   width: 500px;
   background-size: cover;
+  background-position: center;
 }
 
 #boton {
   text-align: center;
+}
+
+#botonComprobarPass {
+  margin-left: 1%;
 }
