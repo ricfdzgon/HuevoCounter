@@ -15,6 +15,20 @@ comprobarPass.type = "button";
 comprobarPass.id = "botonComprobarPass";
 comprobarPass.textContent = "Acceder";
 
+const nombres = document.createElement("select");
+nombres.type = "select";
+nombres.id = "nombres";
+
+/*
+const agregar = () => {
+  const option = document.createElement('option');
+  const valor = new Date().getTime();
+  option.value = valor;
+  option.text = valor;
+  $select.appendChild(option);
+};
+*/
+
 botonHuevos.addEventListener("click", function (event) {
   if (canEdit) {
     contadorHuevos++;
@@ -45,21 +59,21 @@ botonQuitar.addEventListener("click", function (event) {
 comprobarPass.addEventListener("click", function (event) {
   console.log(cajaPassWord.value);
   canEdit = false;
-  if (cajaPassWord.value == "Huevos") {
-  } else {
-    alert("Contraseña erronea");
-    canEdit = true;
-    cajaPassWord.value = "";
-  }
+  comprobarPassword(cajaPassWord.value);
 });
 
 cajaPassWord.addEventListener("change", function (event) {
   console.log(cajaPassWord.value);
   canEdit = false;
+  comprobarPassword(cajaPassWord.value);
+});
+
+function comprobarPassword(datos) {
   if (cajaPassWord.value == "Huevos") {
+    document.getElementById("comboboxNombres").appendChild(nombres);
   } else {
     alert("Contraseña erronea");
     canEdit = true;
     cajaPassWord.value = "";
   }
-});
+}
