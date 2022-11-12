@@ -45,9 +45,21 @@ botonQuitar.addEventListener("click", function (event) {
 comprobarPass.addEventListener("click", function (event) {
   console.log(cajaPassWord.value);
   canEdit = false;
+  if (cajaPassWord.value == "Huevos") {
+  } else {
+    alert("Contraseña erronea");
+    canEdit = true;
+    cajaPassWord.value = "";
+  }
 });
 
 cajaPassWord.addEventListener("change", function (event) {
   console.log(cajaPassWord.value);
   canEdit = false;
+  if (cajaPassWord.value == "Huevos") {
+  } else {
+    alert("Contraseña erronea");
+    canEdit = true;
+    cajaPassWord.value = "";
+  }
 });
