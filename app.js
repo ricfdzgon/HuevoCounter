@@ -19,15 +19,19 @@ const nombres = document.createElement("select");
 nombres.type = "select";
 nombres.id = "nombres";
 
-/*
-const agregar = () => {
-  const option = document.createElement('option');
-  const valor = new Date().getTime();
-  option.value = valor;
-  option.text = valor;
-  $select.appendChild(option);
+const agregar = (nombre) => {
+  const option = document.createElement("option");
+  option.value = nombre;
+  option.text = nombre;
+  nombres.appendChild(option);
 };
-*/
+
+agregar("----");
+agregar("Ricardo");
+agregar("Miguel");
+agregar("Clara");
+agregar("Maria");
+agregar("Luli");
 
 botonHuevos.addEventListener("click", function (event) {
   if (canEdit) {
@@ -66,6 +70,10 @@ cajaPassWord.addEventListener("change", function (event) {
   console.log(cajaPassWord.value);
   canEdit = false;
   comprobarPassword(cajaPassWord.value);
+});
+
+nombres.addEventListener("change", function (event) {
+  console.log(nombres.value);
 });
 
 function comprobarPassword(datos) {
