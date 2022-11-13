@@ -18,6 +18,11 @@ comprobarPass.type = "button";
 comprobarPass.id = "botonComprobarPass";
 comprobarPass.textContent = "Acceder";
 
+const aceptarNombre = document.createElement("button");
+aceptarNombre.type = "button";
+aceptarNombre.id = "botonaceptarNombre";
+aceptarNombre.textContent = "Aceptar";
+
 const nombres = document.createElement("select");
 nombres.type = "select";
 nombres.id = "nombres";
@@ -76,9 +81,21 @@ nombres.addEventListener("change", function (event) {
   console.log(nombres.value);
 });
 
+aceptarNombre.addEventListener("click", function (event) {
+  alert(
+    "Has guardado " +
+      contadorHuevos +
+      " huevos " +
+      "en el usuario: " +
+      nombres.value
+  );
+  location.reload();
+});
+
 function comprobarPassword(datos) {
   if (cajaPassWord.value == "Huevos") {
     document.getElementById("comboboxNombres").appendChild(nombres);
+    document.getElementById("comboboxNombres").appendChild(aceptarNombre);
   } else {
     alert("Contraseña erronea");
     canEdit = true;
