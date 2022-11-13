@@ -1,6 +1,8 @@
 var botonHuevos = document.getElementById("boton_huevo");
 var contadorHuevos = 0;
 var canEdit = true;
+let vid = document.getElementById("video");
+vid.play();
 
 var nombresParticipantes = ["Ricardo", "Miguel", "Clara", "Maria", "Luli"];
 nombresParticipantes.sort();
