@@ -2,6 +2,9 @@ var botonHuevos = document.getElementById("boton_huevo");
 var contadorHuevos = 0;
 var canEdit = true;
 
+var nombresParticipantes = ["Ricardo", "Miguel", "Clara", "Maria", "Luli"];
+nombresParticipantes.sort();
+
 const botonQuitar = document.createElement("button");
 botonQuitar.type = "button";
 botonQuitar.id = "botonQuitar";
@@ -26,12 +29,9 @@ const agregar = (nombre) => {
   nombres.appendChild(option);
 };
 
-agregar("----");
-agregar("Ricardo");
-agregar("Miguel");
-agregar("Clara");
-agregar("Maria");
-agregar("Luli");
+for (let i = 0; i < nombresParticipantes.length; i++) {
+  agregar(nombresParticipantes[i]);
+}
 
 botonHuevos.addEventListener("click", function (event) {
   if (canEdit) {
