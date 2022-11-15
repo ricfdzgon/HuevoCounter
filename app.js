@@ -1,8 +1,8 @@
 var botonHuevos = document.getElementById("boton_huevo");
 var contadorHuevos = 0;
 var canEdit = true;
-let vid = document.getElementById("video");
-vid.play();
+//let vid = document.getElementById("video");
+//vid.play();
 
 var nombresParticipantes = ["Ricardo", "Miguel", "Clara", "Maria", "Luli"];
 nombresParticipantes.sort();
@@ -104,3 +104,10 @@ function comprobarPassword(datos) {
     cajaPassWord.value = "";
   }
 }
+
+/*
+Esto va en el html por si quiero video en la página
+    <video id="video" width="360" height="450" autoplay muted loop>
+      <source src="Videos\Hexagono.mp4" type="video/mp4" />
+    </video>
+*/
