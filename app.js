@@ -71,6 +71,7 @@ comprobarPass.addEventListener("click", function (event) {
   console.log(cajaPassWord.value);
   canEdit = false;
   comprobarPassword(cajaPassWord.value);
+  //comprobarPass.formAction = "db.php";
 });
 
 cajaPassWord.addEventListener("change", function (event) {
