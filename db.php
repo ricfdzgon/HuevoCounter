@@ -6,7 +6,9 @@ $password = "Uynomeacuerdo96.";
 $dbName = "4211553_huevosfritos";
 
 $con = new mysqli($serverName, $userName, $password, $dbName);
-$dato = json_decode(file_get_contents("php://input"), true);
+$_post = json_decode(file_get_contents('php://input'), true);
+$nombre = $_post["mi_dato_1"];
+$huevos = $_post["mi_dato_2"];
 
 // Check connection
 if (!$con) {
@@ -14,7 +16,7 @@ if (!$con) {
 }
 
 $sql = "SELECT * FROM Usuarios";
-$sql2 = "UPDATE Usuarios SET HuevosComidos = 1 WHERE Nombre = 'Miguel'";
+$sql2 = "UPDATE Usuarios SET HuevosComidos = 2 WHERE Nombre = '$nombre'";
 
 $insertarHuevos = mysqli_query($con, $sql2);
 $result = mysqli_query($con, $sql);
