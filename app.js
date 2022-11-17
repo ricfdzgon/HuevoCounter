@@ -84,8 +84,10 @@ nombres.addEventListener("change", function (event) {
 });
 
 aceptarNombre.addEventListener("click", function (event) {
+  var datos = nombres.value;
   fetch("./db.php", {
     method: "POST",
+    body: JSON.stringify(datos),
   })
     .then(function (response) {
       return response.text();
