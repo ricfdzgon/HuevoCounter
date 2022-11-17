@@ -85,10 +85,9 @@ nombres.addEventListener("change", function (event) {
 
 aceptarNombre.addEventListener("click", function (event) {
   var datos = nombres.value;
-  var datos2 = 2;
   fetch("./db.php", {
     method: "POST",
-    body: JSON.stringify({ 'mi_dato_1': datos, 'mi_dato_2': datos2 }),
+    body: JSON.stringify({ 'mi_dato_1': datos, 'mi_dato_2': contadorHuevos }),
   })
     .then(function (response) {
       return response.text();
