@@ -42,16 +42,6 @@ for (let i = 0; i < nombresParticipantes.length; i++) {
 
 botonHuevos.addEventListener("click", function (event) {
   if (canEdit) {
-    fetch("./db.php", {
-      method: "POST",
-    })
-      .then(function (response) {
-        return response.text();
-      })
-      .then(function (texto) {
-        console.log(texto);
-      });
-
     contadorHuevos++;
     document.getElementById("parrafo2").innerHTML =
       "Huevos comidos: " + contadorHuevos + "\t";
@@ -81,7 +71,6 @@ comprobarPass.addEventListener("click", function (event) {
   console.log(cajaPassWord.value);
   canEdit = false;
   comprobarPassword(cajaPassWord.value);
-  //comprobarPass.formAction = "db.php";
 });
 
 cajaPassWord.addEventListener("change", function (event) {
@@ -95,6 +84,16 @@ nombres.addEventListener("change", function (event) {
 });
 
 aceptarNombre.addEventListener("click", function (event) {
+  fetch("./db.php", {
+    method: "POST",
+  })
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (texto) {
+      console.log(texto);
+    });
+
   alert(
     "Has guardado " +
       contadorHuevos +
@@ -102,7 +101,7 @@ aceptarNombre.addEventListener("click", function (event) {
       "en el usuario: " +
       nombres.value
   );
-  location.reload();
+  //location.reload();
 });
 
 function comprobarPassword(datos) {
