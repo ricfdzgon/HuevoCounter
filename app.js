@@ -42,6 +42,9 @@ for (let i = 0; i < nombresParticipantes.length; i++) {
 
 botonHuevos.addEventListener("click", function (event) {
   if (canEdit) {
+    $.post("db.php", function (respuesta) {
+      alert(respuesta);
+    });
     contadorHuevos++;
     document.getElementById("parrafo2").innerHTML =
       "Huevos comidos: " + contadorHuevos + "\t";
