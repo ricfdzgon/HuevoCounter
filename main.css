@@ -56,3 +56,9 @@ p {
 #botonaceptarNombre {
   margin-left: 1%;
 }
+
+ul {
+  text-align: center;
+  color: rgb(182, 182, 196);
+  font-size: larger;
+}
