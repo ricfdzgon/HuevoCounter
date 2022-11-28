@@ -26,13 +26,13 @@ p {
 }
 
 #botonQuitar {
-  background-color: rgb(14, 14, 14);
-  background-image: url("imagenes/signo-de-menos.png");
+  border: 0;
+  background: url("imagenes/signo-de-menos.png");
   background-repeat: no-repeat;
   background-position: center;
-  height: 5%;
-  width: 4%;
-  background-size: contain;
+  height: 40px;
+  width: 40px;
+  background-size: cover;
 }
 
 #boton_huevo {
