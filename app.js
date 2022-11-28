@@ -4,7 +4,14 @@ var canEdit = true;
 //let vid = document.getElementById("video");
 //vid.play();
 
-var nombresParticipantes = ["Ricardo", "Miguel", "Clara", "Maria", "Luli"];
+var nombresParticipantes = [
+  "-----",
+  "Ricardo",
+  "Miguel",
+  "Clara",
+  "Maria",
+  "Luli",
+];
 nombresParticipantes.sort();
 
 const botonQuitar = document.createElement("button");
@@ -85,25 +92,29 @@ nombres.addEventListener("change", function (event) {
 
 aceptarNombre.addEventListener("click", function (event) {
   var datos = nombres.value;
-  fetch("./db.php", {
-    method: "POST",
-    body: JSON.stringify({ 'mi_dato_1': datos, 'mi_dato_2': contadorHuevos }),
-  })
-    .then(function (response) {
-      return response.text();
+  if (datos != "-----") {
+    fetch("./db.php", {
+      method: "POST",
+      body: JSON.stringify({ mi_dato_1: datos, mi_dato_2: contadorHuevos }),
     })
-    .then(function (texto) {
-      console.log(texto);
-    });
+      .then(function (response) {
+        return response.text();
+      })
+      .then(function (texto) {
+        console.log(texto);
+      });
 
-  alert(
-    "Has guardado " +
-      contadorHuevos +
-      " huevos " +
-      "en el usuario: " +
-      nombres.value
-  );
-  //location.reload();
+    alert(
+      "Has guardado " +
+        contadorHuevos +
+        " huevos " +
+        "en el usuario: " +
+        nombres.value
+    );
+    window.setTimeout(recargarPantalla, 3000);
+  } else {
+    alert("Usuario no valido");
+  }
 });
 
 function comprobarPassword(datos) {
@@ -117,6 +128,9 @@ function comprobarPassword(datos) {
   }
 }
 
+function recargarPantalla() {
+  location.reload();
+}
 /*
 Esto va en el html por si quiero video en la página
     <video id="video" width="360" height="450" autoplay muted loop>
