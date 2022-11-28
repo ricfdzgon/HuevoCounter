@@ -36,10 +36,10 @@ p {
 }
 
 #boton_huevo {
-  background-color: aqua;
-  background-image: url("imagenes/huevo.jpg");
+  border: 0;
+  background: url("imagenes/huevo3.png");
   background-repeat: no-repeat;
-  height: 400px;
+  height: 455px;
   width: 500px;
   background-size: cover;
   background-position: center;
