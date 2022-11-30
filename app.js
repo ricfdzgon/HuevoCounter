@@ -93,6 +93,7 @@ nombres.addEventListener("change", function (event) {
 aceptarNombre.addEventListener("click", function (event) {
   var datos = nombres.value;
   if (datos != "-----") {
+    //order by en la consulta aqui podría darnos todo ordenado
     fetch("./db.php", {
       method: "POST",
       body: JSON.stringify({ mi_dato_1: datos, mi_dato_2: contadorHuevos }),
