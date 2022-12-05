@@ -13,14 +13,14 @@ if (!$con) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM Usuarios";
+$sql = "SELECT * FROM `Usuarios` ORDER BY HuevosComidos DESC";
 
 $result = mysqli_query($con, $sql);
 
 
 if (mysqli_num_rows($result) > 0) {
   while ($row = mysqli_fetch_assoc($result)) {
-    echo $row["Nombre"] . " | " . "Huevos Comidos: " . $row["HuevosComidos"] . ",";
+    echo $row["Nombre"] . ": " . $row["HuevosComidos"] . ",";
   }
 } else {
   echo "Error en las transmision de datos";
