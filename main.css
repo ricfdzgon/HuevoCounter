@@ -1,3 +1,7 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
 h1 {
   color: rgb(84, 84, 179);
   text-align: center;
@@ -37,7 +41,7 @@ p {
 
 #boton_huevo {
   border: 0;
-  background: url("imagenes/signo-de-menos.png");
+  background: url("imagenes/huevo3.png");
   background-repeat: no-repeat;
   height: 455px;
   width: 500px;
@@ -61,4 +65,65 @@ ul {
   text-align: center;
   color: rgb(182, 182, 196);
   font-size: larger;
+}
+#sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #151719;
+  left: -200px;
+  transition: all 500ms linear;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul li {
+  margin-bottom: 25px;
+  color: rgba(230, 230, 230, 0.9);
+  list-style: none;
+  padding: 15px 10px;
+  border: 3px solid rgb(26, 3, 175);
+  text-align: center;
+}
+
+.logo {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#sidebar .toggle-btn {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#sidebar .toggle-btn span {
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 30px;
+  border: 3px solid rgba(0, 93, 180, 0.867);
+  color: rgba(0, 93, 180, 0.867);
+}
+
+#li_logo {
+  background: url("imagenes/AmongFrito.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+  width: 87%;
+  background-size: cover;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: aqua;
 }
