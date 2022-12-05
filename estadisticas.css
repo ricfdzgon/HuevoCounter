@@ -56,3 +56,21 @@ html {
   border: 3px solid rgba(0, 93, 180, 0.867);
   color: rgba(0, 93, 180, 0.867);
 }
+
+#li_logo{
+    background: url("imagenes/AmongFrito.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 87%;
+    background-size: cover;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: aqua;
+}
