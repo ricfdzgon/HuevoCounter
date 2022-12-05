@@ -13,11 +13,24 @@ html {
   padding: 0px;
 }
 
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+    background-size: cover;
+  }
+  
 #sidebar {
   position: fixed;
   width: 200px;
   height: 100%;
-  background: #151719;
+  background: #151719b9;
   left: -200px;
   transition: all 500ms linear;
 }
