@@ -141,9 +141,4 @@ function comprobarPassword(datos) {
 function recargarPantalla() {
   location.reload();
 }
-/*
-Esto va en el html por si quiero video en la página
-    <video id="video" width="360" height="450" autoplay muted loop>
-      <source src="Videos\Hexagono.mp4" type="video/mp4" />
-    </video>
-*/
+
